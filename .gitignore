@@ -1,0 +1,3 @@
+libnway.egg-info/
+*.so
+build/
