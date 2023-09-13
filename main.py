@@ -14,5 +14,6 @@ tms = [
 src = src.split(" ")
 tms = [tm.split(" ") for tm in tms]
 
-nway_align(src, tms)
+cov = nway_align(src, tms)
+print(cov)
 

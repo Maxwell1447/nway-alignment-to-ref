@@ -804,7 +804,7 @@ public:
   torch::Tensor getSCmb() { return s_cmb; };
 };
 
-PYBIND11_MODULE(libnway, m)
+PYBIND11_MODULE(nway, m)
 {
   py::class_<EditOpsBatch>(m, "MultiLevEditOps")
       .def(py::init<torch::Tensor, torch::Tensor, long, long, long, long>())

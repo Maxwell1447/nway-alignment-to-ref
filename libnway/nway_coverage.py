@@ -1,6 +1,6 @@
 import torch
 import libnway
-import libnway.libnway
+import libnway.nway
 
 
 def nway_align(src, tms, bos=0, eos=2, unk=3, pad=1, k=10, max_valency=10):
@@ -28,7 +28,7 @@ def nway_align(src, tms, bos=0, eos=2, unk=3, pad=1, k=10, max_valency=10):
     # print(src_t)
     # print(tms_t)
 
-    ops = libnway.libnway.MultiLevEditOps(tms_t.cpu(), src_t.cpu(), k, max_valency, pad, unk)
+    ops = libnway.nway.MultiLevEditOps(tms_t.cpu(), src_t.cpu(), k, max_valency, pad, unk)
     masked_src_cov = ops.get_s_cmb()
 
     # print(masked_src_cov)

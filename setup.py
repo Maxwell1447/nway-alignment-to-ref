@@ -4,7 +4,7 @@ from torch.utils import cpp_extension
 setup(name='libnway',
       packages=find_packages(),
       ext_modules=[
-          cpp_extension.CppExtension('libnway', [
+          cpp_extension.CppExtension('libnway.nway', [
               'clib/nway-align.cpp'
             ])
         ],
